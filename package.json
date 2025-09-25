@@ -1,0 +1,46 @@
+{
+  "name": "prueba-crewai-playwright",
+  "version": "1.0.0",
+  "description": "Sistema automatizado de generación de tests Playwright con CrewAI y IA Gemini",
+  "main": "main.js",
+  "scripts": {
+    "start": "node main.js",
+    "start:advanced": "node advanced-main.js",
+    "setup": "npm install && npx playwright install && node -e \"const AM = require('./archetype-manager'); new AM().createBaseArchetypes();\"",
+    "test": "playwright test",
+    "install-playwright": "playwright install",
+    "validate": "node -e \"const TV = require('./test-validator'); console.log('Validador listo para usar');\"",
+    "dev": "node --inspect advanced-main.js",
+    "clean": "node -e \"require('fs-extra').emptyDir('./OUT'); console.log('Carpeta OUT limpiada');\""
+  },
+  "dependencies": {
+    "@google/generative-ai": "^0.17.1",
+    "@playwright/test": "^1.40.0",
+    "chokidar": "^3.5.3",
+    "csv-parser": "^3.0.0",
+    "dotenv": "^16.3.1",
+    "fs-extra": "^11.2.0",
+    "puppeteer": "^21.5.0"
+  },
+  "devDependencies": {
+    "playwright": "^1.40.0"
+  },
+  "keywords": [
+    "playwright", 
+    "testing", 
+    "automation", 
+    "crewai", 
+    "gemini-ai", 
+    "csv-processing", 
+    "test-generation"
+  ],
+  "author": "Sistema CrewAI",
+  "license": "MIT",
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tu-usuario/prueba-crewai-playwright"
+  }
+}
